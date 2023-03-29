@@ -1,0 +1,36 @@
+.buttonDeleteContact {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #D3D3D3;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.listContact {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactName {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.itemContact {
+  display: flex;
+  gap: 15px;
+  align-items: baseline;
+}
+
+.itemContact::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+}
