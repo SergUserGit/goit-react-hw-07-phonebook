@@ -1,13 +1,10 @@
 import css from './ContactForm.module.css';
 import React, { useState } from 'react';
-//import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContacts, resetFilterContacts } from 'redux/slice';
+//import { addContacts, resetFilterContacts } from 'redux/slice';
 
 import { addContact } from 'redux/operations';
 import { getContacts } from '../../redux/selectors';
-
-//import axios from 'axios';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -25,36 +22,8 @@ const ContactForm = () => {
     }
   };
 
-  //const getData = async () => {
-  //   const response = await axios.delete(
-  //    'https://64243da2474017404336a1ce.mockapi.io/contacts/contacts/2'
-  //  );
-  //  const response = await axios.get(
-  //      'https://64243da2474017404336a1ce.mockapi.io/contacts/contacts'
-  //   );
-  //  "createdAt": "2023-03-30T00:52:30.219Z",
-  //"name": "Nicholas Harris",
-  //"phone": "211-444-9371",
-  // const jsonDate = new Date().toJSON();
-  //  const response = await axios.post(
-  //    'https://64243da2474017404336a1ce.mockapi.io/contacts/contacts',
-  //    { name: 'Serhii new', phone: '75-225-489', createdAt: jsonDate }
-  //  );
-  //  return response.data;
-  // };
-
   const handleSubmit = evt => {
     evt.preventDefault();
-
-    // const jsonDate = new Date().toJSON();
-    //  console.log(typeof jsonDate);
-
-    //   const a = getData();
-    //  a.then(value => {
-    //     console.log(value);
-    //  });
-
-    //   dispatch(resetFilterContacts());
     const findElem = contacts.filter(
       contact => contact.name.toUpperCase() === name.toUpperCase()
     );

@@ -9,8 +9,6 @@ const App = () => {
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
 
-  console.log(error);
-
   return (
     <div
       style={{
@@ -27,6 +25,7 @@ const App = () => {
       <h2>Contacts</h2>
       <Filter />
       {isLoading && !error && <h3>Request in progress...</h3>}
+      {!isLoading && error && <h3>Error...{error}</h3>}
       <ContactList />
     </div>
   );

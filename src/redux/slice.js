@@ -2,12 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchContacts, addContact, deleteContact } from './operations';
 
 const handlePending = state => {
-  state.isLoading = true;
+  state.contacts.isLoading = true;
 };
 
 const handleRejected = (state, action) => {
-  state.isLoading = false;
-  state.error = action.payload;
+  state.contacts.isLoading = false;
+  state.contacts.error = action.payload;
 };
 export const contactsSlice = createSlice({
   name: 'phonebook',
