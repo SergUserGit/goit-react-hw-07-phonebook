@@ -1,7 +1,7 @@
 import css from './ContactForm.module.css';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-//import { addContacts, resetFilterContacts } from 'redux/slice';
+import { resetFilterContacts } from 'redux/slice';
 
 import { addContact } from 'redux/operations';
 import { getContacts } from '../../redux/selectors';
@@ -24,6 +24,7 @@ const ContactForm = () => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
+    dispatch(resetFilterContacts());
     const findElem = contacts.filter(
       contact => contact.name.toUpperCase() === name.toUpperCase()
     );
